@@ -332,3 +332,21 @@ footer {
         gap: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    .info1 {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .info1 h2,
+    .info1 p {
+        max-width: 100%;
+    }
+
+    .info1 img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
