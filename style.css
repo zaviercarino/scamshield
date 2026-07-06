@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap');
+/* ================= VARIABLES ================= */
+:root {
+    --black: #000000;
+    --navy: #14213d;
+    --orange: #fca311;
+    --light: #e5e5e5;
+    --white: #ffffff;
+}
+
+/* ================= BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mozilla Text", sans-serif;
+}
+
+body {
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+/* ================= NAV ================= */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 1px solid var(--light);
+    position: sticky;
+    top: 0;
+    background-color: var(--navy);
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.nav nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: 0.2s ease;
+    display: inline-block;
+}
+
+.nav a:hover {
+    color: var(--orange);
+    transform: scale(1.025);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    color: var(--white);
+    font-weight: 650;
+    font-size: 20px;
+}
+
+.nav img {
+    max-height: 30px;
+    max-width: 30px;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+    background: var(--orange);
+    color: var(--black);
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border-width: 0px;
+    transition: 0.2s ease;
+}
+
+.btn-secondary {
+    border: 1px solid var(--black);
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--black);
+    transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+}
+.btn-secondary:hover {
+  transform: scale(1.03);
+}
+
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 60px;
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-left h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.hero-left p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-right {
+    flex: 1;
+    height: 350px;
+    background: var(--light);
+    border-radius: 12px;
+}
+
+.hero-right img {
+    background-color: black;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+
+.hero-left img {
+    background-color: black;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+
+/* ================= TRUST BAR ================= */
+.trust-bar {
+    text-align: center;
+    padding: 20px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 14px;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= FEATURES ================= */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 80px 60px;
+    gap: 20px;
+}
+
+.feature {
+    padding: 25px;
+    border: 1px solid var(--light);
+    border-radius: 10px;
+    background: var(--light);
+    transition: 0.2s ease;
+    margin-bottom: 80px;
+}
+
+.feature:hover {
+    background-color: white;
+    transform: scale(1.03);
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.section-header {
+    text-align: center;
+    background-color: var(--navy);
+    color: white;
+    padding: 12px;
+}
+
+/* ================= INFORMATION ================= */
+
+.info1 {
+    background-color: var(--navy);
+    color: var(--white);
+
+    border-radius: 30px;
+    padding: 100px 60px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+
+    max-width: 1000px;
+    width: 90%;
+
+    text-align: left;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.info1-text {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.info1 h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    max-width: 60%;
+}
+
+.info1 p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 60%;
+}
+
+.info1 img {
+    max-width: 300px;
+    max-height: auto;
+}
+
+.info1:hover {
+    transform: scale(1.035);
+}
+
+/* ================= ADVERTISEMENT ================= */
+
+.advert {
+    background-color: var(--light);
+    color: var(--black);
+
+    padding: 100px 60px;
+    margin: 30px auto;
+
+    text-align: center;
+
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.advert p {
+    max-width: 40%;
+    margin: 15px auto;
+    line-height: 30px;
+}
+
+.advert button {
+    background: var(--orange);
+    color: var(--black);
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border-width: 0px;
+    transition: 0.2s ease;
+}
+
+.advert button:hover {
+  transform: scale(1.03);
+}
+
+
+/* ================= HIGHLIGHT ================= */
+.highlight {
+    padding: 60px;
+    background: var(--navy);
+}
+
+.highlight-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 800px;
+}
+
+/* ================= CTA ================= */
+.cta {
+    text-align: center;
+    padding: 100px 40px;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid var(--light);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
