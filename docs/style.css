@@ -205,10 +205,12 @@ body {
     color: var(--white);
 
     border-radius: 30px;
-    padding: 100px 60px;
+    padding: 60px 40px;
+
     margin: 30px auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     max-width: 1000px;
     width: 90%;
@@ -217,6 +219,7 @@ body {
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
 
     transition: 0.3s ease;
+    flex-wrap: wrap;
 }
 
 .info1-text {
@@ -228,18 +231,20 @@ body {
 .info1 h2 {
     font-size: 30px;
     margin-bottom: 20px;
-    max-width: 60%;
+    max-width: 100%;
 }
 
 .info1 p {
     font-size: 18px;
     line-height: 1.8;
-    max-width: 60%;
+    max-width: 100%;
 }
 
 .info1 img {
     max-width: 300px;
-    max-height: auto;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .info1:hover {
@@ -349,4 +354,8 @@ footer {
         max-width: 80%;
         margin-top: 20px;
     }
+}
+
+html, body {
+    overflow-x: hidden;
 }
