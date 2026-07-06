@@ -264,7 +264,6 @@ body {
 }
 
 .advert p {
-    max-width: 40%;
     margin: 15px auto;
     line-height: 30px;
 }
@@ -285,6 +284,9 @@ body {
   transform: scale(1.03);
 }
 
+.form {
+    background-color: var(--light);
+}
 
 /* ================= HIGHLIGHT ================= */
 .highlight {
