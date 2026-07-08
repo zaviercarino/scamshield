@@ -6,6 +6,7 @@
     --orange: #fca311;
     --light: #e5e5e5;
     --white: #ffffff;
+    --red: #FF6961;
 }
 
 /* ================= BASE ================= */
@@ -20,6 +21,23 @@ body {
     background: var(--white);
     color: var(--black);
     line-height: 1.6;
+}
+
+/* ================= BREADCRUMB ================= */
+
+.breadcrumb {
+    padding: 15px 60px;
+    font-size: 14px;
+    color: #667;
+}
+
+.breadcrumb a {
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--orange);
 }
 
 /* ================= NAV ================= */
@@ -181,12 +199,18 @@ body {
     margin-bottom: 80px;
 }
 
+.featureLink {
+    text-decoration: none;
+    color: inherit;
+}
+
 .feature:hover {
     background-color: white;
     transform: scale(1.03);
 }
 
 .feature h3 {
+    text-decoration: none;
     margin-bottom: 10px;
 }
 
@@ -243,10 +267,57 @@ body {
     width: 100%;
     height: auto;
     flex-shrink: 0;
+    border-radius: 30px;
 }
 
 .info1:hover {
     transform: scale(1.035);
+}
+
+/* ================= BODY-CONTENT ================= */
+
+.bodyContentBox {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.text-box,
+.content-box {
+    flex: 1;
+    border-radius: 12px;
+    padding: 60px 40px;
+    margin: 50px;
+
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    background: var(--light);
+    transition: 0.3s ease;
+}
+
+.text-box:hover,
+.content-box:hover {
+    transform: scale(1.03);
+}
+
+.text-box {
+    color: #FF0000;
+    border-left: 4px solid var(--red);
+}
+
+.text-box h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.content-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-box img {
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 /* ================= ADVERTISEMENT ================= */
@@ -366,4 +437,44 @@ footer {
 
 html, body {
     overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+    .bodyContentBox {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .text-box,
+    .content-box {
+        margin: 20px 10px;
+        padding: 35px 25px;
+        width: auto;
+    }
+
+    .text-box h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .text-box li {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .content-box {
+        min-height: auto;
+    }
+
+    .content-box img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text-box:hover,
+    .content-box:hover {
+        transform: none;
+    }
 }
