@@ -172,6 +172,17 @@ body {
     display: block;
 }
 
+#banner {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 /* ================= TRUST BAR ================= */
 .trust-bar {
     text-align: center;
@@ -221,6 +232,13 @@ body {
     padding: 12px;
 }
 
+.section-header2 {
+    text-align: center;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 12px;
+}
+
 /* ================= INFORMATION ================= */
 
 .info1 {
@@ -244,24 +262,58 @@ body {
     transition: 0.3s ease;
 }
 
+.info2 {
+    background-color: var(--navy);
+    color: var(--white);
+
+    padding: 60px 40px;
+
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    transition: 0.3s ease;
+}
+
+.info3 {
+    background-color: var(--orange);
+    color: var(--white);
+
+    padding: 60px 40px;
+
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    transition: 0.3s ease;
+}
+
+.info2-text,
 .info1-text {
     display: flex;
     flex-direction: column;
     margin: auto;
 }
 
+.info2 h2,
 .info1 h2 {
     font-size: 30px;
     margin-bottom: 20px;
     max-width: 100%;
 }
 
+.info2 p,
 .info1 p {
     font-size: 18px;
     line-height: 1.8;
     max-width: 100%;
 }
 
+.info2 img,
 .info1 img {
     max-width: 300px;
     width: 100%;
@@ -270,8 +322,63 @@ body {
     border-radius: 30px;
 }
 
+.info2:hover,
 .info1:hover {
     transform: scale(1.035);
+}
+
+/* ================= TRIPLE-BANNER ================= */
+
+.tripple-banner {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.banner-card {
+    background: var(--light);
+    padding: 35px;
+    border-radius: 15px;
+    transition: .25s ease;
+}
+
+.banner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,.15);
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.banner-card h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.banner-card p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+@media (max-width:768px){
+
+    .tripple-banner {
+        padding: 50px 20px;
+    }
+
+    .banner-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 /* ================= BODY-CONTENT ================= */
@@ -302,6 +409,9 @@ body {
 .text-box {
     color: #FF0000;
     border-left: 4px solid var(--red);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 100%;
 }
 
 .text-box h2 {
