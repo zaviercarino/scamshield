@@ -376,6 +376,7 @@ body {
 
 .banner-card h3 {
     color: var(--navy);
+    font-size: 1rem;
     margin-bottom: 15px;
 }
 
@@ -396,6 +397,35 @@ body {
     }
 }
 
+/* ================= DETAIL-BAR ================= */
+details {
+    border: 1px solid var(--black);
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin: 20px 0;
+}
+
+summary {
+    font-size: 1.5rem;
+    font-weight: 600;
+    list-style: none;
+}
+
+summary::after {
+    content: "+";
+    float: right;
+    font-size: 28px;
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+.content {
+    margin-top: 20px;
+    border-top: 1px solid var(--black);
+    padding-top: 20px;
+}
 /* ================= BODY-CONTENT ================= */
 
 .bodyContentBox {
