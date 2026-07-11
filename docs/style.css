@@ -207,7 +207,7 @@ body {
     border-radius: 10px;
     background: var(--light);
     transition: 0.2s ease;
-    margin-bottom: 80px;
+
 }
 
 .featureLink {
@@ -403,6 +403,8 @@ details {
     border-radius: 12px;
     padding: 18px 24px;
     margin: 20px 0;
+    background-color: var(--navy);
+    color: var(--white);
 }
 
 summary {
