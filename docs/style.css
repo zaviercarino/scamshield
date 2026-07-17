@@ -64,6 +64,7 @@ body {
     font-weight: 500;
     transition: 0.2s ease;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .nav a:hover {
