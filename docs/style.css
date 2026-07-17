@@ -579,9 +579,8 @@ footer {
     }
 
     .nav nav {
-        display: flex;
-        gap: 25px;
-        overflow-x: auto;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
