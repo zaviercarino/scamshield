@@ -180,7 +180,6 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    transform: translateX(-50%);
 }
 
 /* ================= TRUST BAR ================= */
@@ -207,12 +206,15 @@ body {
     border-radius: 10px;
     background: var(--light);
     transition: 0.2s ease;
-
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
 }
 
 .featureLink {
     text-decoration: none;
     color: inherit;
+    display: flex;
 }
 
 .feature:hover {
@@ -402,25 +404,27 @@ details {
     border: 1px solid var(--black);
     border-radius: 12px;
     padding: 18px 24px;
-    margin: 20px 0;
+    margin: 20px auto;
     background-color: var(--navy);
     color: var(--white);
+    max-width: 95%;
 }
 
 summary {
     font-size: 1.5rem;
     font-weight: 600;
     list-style: none;
+    text-align: center;
+    cursor: pointer;
 }
 
 summary::after {
-    content: "+";
-    float: right;
+    content: " +";
     font-size: 28px;
 }
 
 details[open] summary::after {
-    content: "−";
+    content: " −";
 }
 
 .content {
