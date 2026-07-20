@@ -240,7 +240,7 @@ body {
 }
 
 /* ================= FEATURES ================= */
-.features {
+.features { 
     display:grid;
 
     grid-template-columns:
