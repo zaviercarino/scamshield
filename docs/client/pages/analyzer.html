@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzer</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="nav">
+        <div class="logo-container">
+            <img src = "../images/whiteOutlineLogo.png" alt="Logo">
+            <div class="logo">ScamShield</div>
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../library.html">Scam Library</a>
+            <a href="analyzer.html">Message Checker</a>
+            <a href="alerts.html">Alerts</a>
+            <a href="about.html">About</a>
+        </nav>
+        <button class="btn-primary">Analyze Message</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Get Scam Alerts Before They Reach You.</h1>
+            <p>Receive weekly scam alerts, new fraud trends, and practical safety tips delivered straight to your inbox.</p>
+        </div>
+        <div class="hero-right"></div>
+    </section>
+
+    <main class="analyzer-page">
+        <section class="analyzer-container">
+            <div class="analyzer-header">
+                <h2>Scam Analyzer</h2>
+                <p>
+                    Paste suspicious emails, text messages, or social media messages
+                    below and let AI analyze them for potential scam flags.
+                </p>
+            </div>
+            <div class="input-card">
+                <textarea
+                    id="input-scam"
+                    placeholder="Paste the suspicious message here..."
+                ></textarea>
+                <button class="btn-primary" id="submit-button">
+                    Analyze Message
+                </button>
+                <h4 id="warning-text"></h4>
+            </div>
+            <section class="results-card">
+                <h4 id="warning-text">Message Analysis</h4>
+                <div id="scam-output">
+                    <p id="output-placeholder">Your analysis will appear here.</p>
+                </div>
+                <button class="hidden" id="clear-output">Clear</button>
+            </section>
+        </section>
+    </main>
+    
+    <section class="cta">
+        <h2>Don’t wait until it happens to you.</h2>
+        <a class="btn-primary">Start Checking Messages</a>
+    </section>
+
+    <footer>
+        <p>© 2026 ScamShield</p>
+    </footer>
+
+    <script type="module" src="../scamshield-js/main.js"></script>    
+</body>
+</html>

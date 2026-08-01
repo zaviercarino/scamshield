@@ -1,0 +1,30 @@
+{
+  "name": "scamshield",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaviercarino/scamshield.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/zaviercarino/scamshield/issues"
+  },
+  "homepage": "https://github.com/zaviercarino/scamshield#readme",
+  "dependencies": {
+    "@google/genai": "^2.15.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}

@@ -153,7 +153,7 @@ body {
 }
 
 .btn-primary:hover {
-  transform: scale(1.03);
+  transform: translateY(-3px);
 }
 .btn-secondary:hover {
   transform: scale(1.03);
@@ -229,16 +229,35 @@ body {
     height: auto;
 }
 
+/* ================= PARAGRAPH TEXT ALIGNING ================= */
+
+.section-header p,
+.section-header2 p,
+.trust-bar p,
+.cta p,
+footer p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 /* ================= TRUST BAR ================= */
 .trust-bar {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background: var(--navy);
     color: var(--white);
-    font-size: 14px;
     box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
+.trust-bar p {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    text-align: center;
+}
 /* ================= FEATURES ================= */
 .features { 
     display:grid;
@@ -293,6 +312,344 @@ body {
     background-color: var(--orange);
     color: var(--white);
     padding: 12px;
+}
+/* ================= SCAM RESULTS ================= */
+
+.scam-result {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.result-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 22px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--light);
+}
+
+.result-eyebrow,
+.result-label {
+    color: #667;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.result-top h2 {
+    color: var(--navy);
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    line-height: 1.2;
+}
+
+#risk-score {
+    color: var(--red);
+}
+
+.risk-badge {
+    min-width: 120px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+.risk-badge span {
+    display: block;
+    font-size: .72rem;
+    opacity: .8;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.risk-badge strong {
+    color: var(--orange);
+    font-size: 1.1rem;
+}
+
+.result-summary {
+    padding: 22px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    border-left: 5px solid var(--orange);
+    background: var(--light);
+}
+
+.result-summary h3 {
+    margin: 4px 0 18px;
+    color: var(--navy);
+    font-size: 1.35rem;
+}
+
+.result-summary p:last-child {
+    margin-top: 5px;
+    color: #333;
+}
+
+.result-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.result-section {
+    padding: 22px;
+    border: 1px solid var(--light);
+    border-radius: 12px;
+    background: var(--white);
+}
+
+.result-section h3 {
+    margin-bottom: 12px;
+    color: var(--navy);
+    font-size: 1.1rem;
+}
+
+.result-section ul {
+    padding-left: 20px;
+}
+
+.result-section li {
+    margin-bottom: 9px;
+    color: #333;
+}
+
+.result-section--warning {
+    border-top: 5px solid var(--red);
+}
+
+.result-section--warning h3 {
+    color: #b9403b;
+}
+
+.result-section--action {
+    border-top: 5px solid var(--orange);
+}
+
+@media (max-width: 650px) {
+    .result-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .result-details {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-badge {
+        width: 100%;
+    }
+}
+/* ================= SCAM ANALYZER ================= */
+
+.analyzer-page {
+    max-width: 95%;
+    margin: auto;
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.analyzer-header {
+    background: var(--navy);
+    border-radius: 2rem;
+    padding: 15px 30px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.analyzer-header p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.analyzer-page h2 {
+    color: var(--orange);
+    font-size: 2rem;
+}
+
+.analyzer-page p {
+    color: var(--white);
+    font-size: .9rem;
+}
+
+.input-card {
+    display: grid;
+}
+
+.input-card textarea {
+    height: 230px;
+    margin-bottom: 30px;
+    padding: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .3);
+}
+
+.input-card textarea:focus {
+    outline: 2px dashed var(--orange);
+    box-shadow: none;
+}
+
+.input-card h4 {
+    color: var(--red);
+}
+
+.results-card {
+    margin: 30px auto;
+}
+
+.results-card p {
+    color: var(--black);
+}
+
+#scam-output {
+    margin: 20px auto;
+    padding: 20px 30px;
+
+    background: var(--white);
+    color: var(--black);
+
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, .3);
+}
+
+.results-card button {
+    width: 100px;
+    height: 30px;
+    margin: 20px auto;
+
+    border: none;
+    border-radius: 6px;
+
+    background: var(--orange);
+    color: var(--black);
+
+    font-size: clamp(.85rem, 1.5vw, 1rem);
+    font-weight: bold;
+
+    transition: .2s ease;
+}
+
+.results-card button:hover {
+    transform: translateY(-3px);
+}
+
+.analyzer-page {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.analyzer-header,
+.input-card,
+.results-card {
+    width: min(100%, 900px);
+}
+
+.input-card textarea {
+    width: 100%;
+}
+
+.input-card {
+    width: min(100%, 900px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#disclaimer {
+    color: #333;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.7rem;
+}
+/* ================= SCAM LIBRARY ================= */
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 65px;
+    padding: 20px;
+}
+
+.library-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 255px;
+    padding: 28px;
+    border: 1px solid var(--light);
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .07);
+    transition: .25s ease;
+}
+
+.library-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--orange);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, .13);
+}
+
+.library-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--light);
+    font-size: 1.5rem;
+}
+
+.library-card h2 {
+    margin-bottom: 10px;
+    color: var(--navy);
+    font-size: 1.12rem;
+    line-height: 1.3;
+}
+
+.library-card p {
+    color: #444;
+    font-size: .94rem;
+    line-height: 1.65;
+}
+
+.library-link {
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--navy);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .library-intro {
+        margin: 25px 15px 10px;
+    }
+
+    .library-grid {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+    }
+}
+/* ================= HIDDEN ================= */
+
+.hidden {
+    display: none;
 }
 
 /* ================= STAT-LINE ================= */
