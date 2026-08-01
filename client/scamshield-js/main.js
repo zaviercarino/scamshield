@@ -26,7 +26,7 @@ button.addEventListener("click", async () => {
     console.log("1")
 
     try {
-        const response = await fetch("http://localhost:3000/analyze", {
+        const response = await fetch("https://scamshield-api-stix.onrender.com/analyze", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
