@@ -2,9 +2,7 @@ import express from "express";
 import cors from "cors";
 import {analyzeMessage} from "./analyzer-js/api.js";
 import {formatResult} from "./analyzer-js/formatter.js";
-import {scamPrompt} from "./analyzer-js/prompt.js"
-
-const PORT = 3000;
+import {scamPrompt} from "./analyzer-js/prompt.js";
 
 const app = express();
 app.use(cors());
@@ -32,6 +30,8 @@ app.post("/analyze", async (req, res) => {
     }
 });
 
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-    console.log(`Server listening on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
