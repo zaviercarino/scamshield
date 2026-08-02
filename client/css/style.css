@@ -207,11 +207,13 @@ body {
 }
 
 .hero-right img {
-    border-radius: 40px;
+    border-radius: 10px;
     width: 100%;
     height: auto;
     object-fit: cover; 
     display: block;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    
 }
 
 .hero-left img {
