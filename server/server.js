@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import rateLimit from "express-rate-limit";
 import {analyzeMessage} from "./analyzer-js/api.js";
 import {formatResult} from "./analyzer-js/formatter.js";
 import {scamPrompt} from "./analyzer-js/prompt.js";
@@ -8,11 +9,21 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const analyzerLimit = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 1,
+    message: {
+        error: "Too many requests. Please try again later."
+    },
+    standardHeaders: true,
+    legacyHeaders: false
+})
+
 app.get("/", (req, res) => {
     res.send("ScamShield backend is running!");
 });
 
-app.post("/analyze", async (req, res) => {
+app.post("/analyze", analyzerLimit, async (req, res) => {
     try {
         const message = scamPrompt + req.body.message + `END_UNTRUSTED_CONTENT`;
 
