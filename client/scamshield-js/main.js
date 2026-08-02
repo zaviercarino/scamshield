@@ -37,7 +37,12 @@ button.addEventListener("click", async () => {
         });
 
         const result = await response.text();
-        outputLabel.innerHTML = result.stringify();
+
+        if(response.error){
+            outputLabel.innerHTML = JSON.stringify(result);
+        } else {
+            outputLabel.innerHTML = result;
+        }
     }
     catch(error){
         console.error(error);
