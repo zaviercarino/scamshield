@@ -88,6 +88,19 @@ Confidence is an integer from 0 to 100 and reflects certainty in the assessment:
 
 Use high confidence for clearly benign messages with no indicators.
 
+MANDATORY GRAY-AREA CHECK
+
+Before assigning the final risk score, identify both suspicious evidence and legitimate contextual evidence explicitly present in the message.
+
+- Treat a claimed third-party provider as neither proof of legitimacy nor proof of deception.
+- If the official domain is not provided, describe a URL as brand-mismatched or unverified; do not state that it is fake or unofficial.
+- An expected contact, a recipient-confirmed prior request, known non-sensitive transaction details, and permission to independently verify through an official channel are legitimate contextual evidence and must reduce certainty when relevant.
+- A browser warning, unfamiliar link, or appointment deadline alone can justify moderate risk, but not high risk.
+- Do not assign 70 or higher unless the message contains at least two primary indicators, or one severe primary indicator such as a direct credential request, money-transfer request, or clearly deceptive domain.
+- Do not assign 80 or higher without a direct credential or payment-diversion request combined with impersonation, a clearly deceptive destination, or strong coercion.
+
+When evidence is mixed, explain the uncertainty and use a moderate risk score with moderate confidence.
+
 OUTPUT RULES
 
 Return only one valid JSON object. No markdown, code fences, explanation, or extra fields.
