@@ -11,7 +11,7 @@ app.use(express.json());
 
 const analyzerLimit = rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: 1,
+    max: 3,
     message: {
         error: "Too many requests. Please try again later."
     },

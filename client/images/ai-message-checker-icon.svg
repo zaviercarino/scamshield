@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124" role="img" aria-labelledby="title desc">
+  <title id="title">AI Message Checker</title>
+  <desc id="desc">A navy chat bubble inspected by an orange magnifying glass.</desc>
+  <path fill="#14213d" d="M20 24c0-8.837 7.163-16 16-16h43c8.837 0 16 7.163 16 16v37c0 8.837-7.163 16-16 16H54.5L32 95v-18.4C24.826 74.14 20 68.105 20 61V24Z"/>
+  <path fill="#fca311" d="M38 31h39a4 4 0 1 1 0 8H38a4 4 0 1 1 0-8Zm0 16h27a4 4 0 1 1 0 8H38a4 4 0 1 1 0-8Z"/>
+  <circle cx="77" cy="75" r="20" fill="#fca311"/>
+  <circle cx="77" cy="75" r="12" fill="#14213d"/>
+  <path fill="#fca311" d="m91.142 89.142 16.97 16.97a6 6 0 0 1-8.485 8.485l-16.97-16.97 8.485-8.485Z"/>
+</svg>

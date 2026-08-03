@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124" role="img" aria-labelledby="title desc">
+  <title id="title">Weekly Alerts</title>
+  <desc id="desc">A navy calendar with an orange alert bell.</desc>
+  <path fill="#14213d" d="M23 16h8v9h28v-9h8v9h8v-9h8v9h5c7.18 0 13 5.82 13 13v53c0 7.18-5.82 13-13 13H23c-7.18 0-13-5.82-13-13V38c0-7.18 5.82-13 13-13v-9Z"/>
+  <path fill="#fca311" d="M10 40h91v12H10V40Zm17 23h10v10H27V63Zm19 0h10v10H46V63Zm19 0h10v10H65V63ZM27 82h10v10H27V82Zm19 0h10v10H46V82Z"/>
+  <path fill="#fca311" d="M88 69c-11.05 0-20 8.95-20 20v6.27L63.8 102a4 4 0 0 0 3.2 6h42a4 4 0 0 0 3.2-6L108 95.27V89c0-11.05-8.95-20-20-20Z"/>
+  <path fill="#14213d" d="M88 64a5 5 0 0 1 5 5v3.06a20.9 20.9 0 0 0-10 0V69a5 5 0 0 1 5-5Zm-7 47h14a7 7 0 0 1-14 0Zm-9.35-8 3.42-5.49A4 4 0 0 0 75.67 95V89a12.33 12.33 0 0 1 24.66 0v6a4 4 0 0 0 .6 2.12l3.42 5.49H71.65Z"/>
+</svg>
