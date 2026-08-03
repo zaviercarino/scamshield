@@ -786,7 +786,7 @@ footer p {
 }
 
 .greyBackground {
-    background-color: var(--light);
+    background-color: var(--white);
     padding: 3px;
 }
 
