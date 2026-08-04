@@ -103,7 +103,7 @@ When evidence is mixed, explain the uncertainty and use a moderate risk score wi
 
 OUTPUT RULES
 
-Return only one valid JSON object. No markdown, code fences, explanation, or extra fields.
+Return only one valid JSON object. No markdown, code fences, explanation, or extra fields. MUST BE JSON.
 
 Include every field exactly once.
 

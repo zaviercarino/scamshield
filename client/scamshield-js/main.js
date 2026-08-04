@@ -23,7 +23,6 @@ button.addEventListener("click", async () => {
     
     warningLabel.textContent = "Retrieving Content...";
     button.disabled = true;
-    console.log("1")
 
     try {
         const response = await fetch("https://scamshield-api-stix.onrender.com/analyze", {
@@ -37,13 +36,20 @@ button.addEventListener("click", async () => {
         });
 
         const result = await response.text();
-        const JSONresult = JSON.parse(result);
 
-        if(JSONresult.error){
-            outputLabel.innerHTML = JSONresult.error
-        } else {
+        try {
+            const JSONresult = JSON.parse(result);
+            console.log(JSONresult)
+
+            if(JSONresult.error){
+                outputLabel.innerHTML = JSONresult.error
+            } else {
+                outputLabel.innerHTML = result;
+            }
+        } catch(error) {
             outputLabel.innerHTML = result;
         }
+        
     }
     catch(error){
         console.error(error);
