@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124" role="img" aria-labelledby="title desc">
+  <title id="title">Tech Support Scams</title>
+  <desc id="desc">A clean desktop computer monitor icon.</desc>
+  <rect x="14" y="17" width="96" height="66" rx="12" fill="#14213d"/>
+  <rect x="25" y="28" width="74" height="44" rx="6" fill="#fca311"/>
+  <path fill="#14213d" d="m46 48 10-10a4 4 0 0 1 5.7 5.7L55.5 50l6.2 6.3a4 4 0 0 1-5.7 5.7L46 52a4 4 0 0 1 0-4Zm24-10a4 4 0 0 1 5.7 0l10 10a4 4 0 0 1 0 4l-10 10a4 4 0 1 1-5.7-5.7l6.3-6.3-6.3-6.3a4 4 0 0 1 0-5.7Z"/>
+  <rect x="55" y="83" width="14" height="15" rx="3" fill="#14213d"/>
+  <rect x="35" y="97" width="54" height="10" rx="5" fill="#14213d"/>
+</svg>

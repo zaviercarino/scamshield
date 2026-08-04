@@ -1,3 +1,14 @@
+// ============== Button Handlers ============== \\
+
+const analyzeButton = document.getElementById("analyze-message");
+
+analyzeButton.addEventListener("click", () => {
+    window.location.href = "../pages/analyzer.html";
+})
+
+
+// ============== Message Analyzer ============== \\
+
 const button = document.getElementById("submit-button");
 const warningLabel = document.getElementById("warning-text");
 
