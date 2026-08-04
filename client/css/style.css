@@ -473,7 +473,10 @@ footer p {
     margin-right: auto;
 }
 
-
+#red-disclaimer-small {
+    color: var(--red);
+    font-size: 0.6rem;
+}
 
 .analyzer-page h2 {
     color: var(--orange);
