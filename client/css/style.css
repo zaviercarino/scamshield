@@ -140,6 +140,8 @@ body {
     transition: 0.2s ease;
 }
 
+#btn-black-font {color: var(--black); font-weight: bold;}
+
 .btn-primary,
 .btn-secondary {
 

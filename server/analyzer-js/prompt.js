@@ -155,6 +155,8 @@ Family Emergency scams
 
 none
 
+In the event you encountered a scam that does not apply to any of these categories, you may attribute the most relevant scamtype of your choice.
+
 Allowed library values:
 
 phishing
