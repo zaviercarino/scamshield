@@ -1,9 +1,4 @@
-// ============== Vercel Analytics ============== \\
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/next"
-
 // ============== Message Analyzer ============== \\
-
 const button = document.getElementById("submit-button");
 const warningLabel = document.getElementById("warning-text");
 
@@ -27,7 +22,32 @@ button.addEventListener("click", async () => {
         return console.error(`Message too long by ${Number(letterCount) - 15000} characters.`);
     }
     
-    warningLabel.textContent = "Retrieving Content...";
+    const loadingContentLabels = ["Retrieving Content", "Scanning For Red Flags", "Analyzing Credibility", "Evaluating Risk", "Running Scan", "Processing Message", "Inspecting Links"];
+    let loadingIndex = 0;
+    let loadingInterval; 
+
+    function startLoadingAnimation() {
+        loadingIndex = 0;
+
+        warningLabel.textContent = loadingContentLabels[loadingIndex];
+
+        loadingInterval = setInterval(() => {
+            loadingIndex++;
+
+            if (loadingIndex >= loadingContentLabels.length) {
+                loadingIndex = 0;
+            }
+
+            warningLabel.textContent = loadingContentLabels[loadingIndex];
+        }, 1000);
+    }
+
+    function stopLoadingAnimation() {
+        clearInterval(loadingInterval);
+        warningLabel.textContent = "";
+    }
+
+    startLoadingAnimation()
     button.disabled = true;
 
     try {
@@ -65,10 +85,9 @@ button.addEventListener("click", async () => {
         }, 3000);
     }
     finally{
+        stopLoadingAnimation();
         button.disabled = false; 
     }
-
-    warningLabel.textContent = ``;
     
     const clearButton = document.getElementById("clear-output");
     clearButton.classList = "clear-output-button";
