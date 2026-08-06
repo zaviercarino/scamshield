@@ -1,3 +1,7 @@
+// ============== Vercel Analytics ============== \\
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
+
 // ============== Message Analyzer ============== \\
 
 const button = document.getElementById("submit-button");
