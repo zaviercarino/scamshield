@@ -9,7 +9,7 @@
 Learn the signs. Think twice. Stay protected.
 ```
 
-[![Live Site](https://img.shields.io/badge/Website-scamshieldapp.org-000000?style=flat-square)](https://scamshieldapp.org)
+[![Live Site](https://img.shields.io/badge/Website-scamshieldapp.org-000000?style=flat-square)]
 [![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)](#)
 
 > **ScamShield is a free web platform that helps people identify, understand, and report online scams.**
