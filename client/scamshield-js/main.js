@@ -1,3 +1,11 @@
+// ============== Buttons ============== \\
+const menuButton = document.getElementById("btn-menu-dropdown");
+const menuDropdown = document.querySelector(".menu-dropdown");
+
+menuButton.addEventListener("click", () => {
+    menuDropdown.classList.toggle("active");
+});
+
 // ============== Message Analyzer ============== \\
 const button = document.getElementById("submit-button");
 const warningLabel = document.getElementById("warning-text");
