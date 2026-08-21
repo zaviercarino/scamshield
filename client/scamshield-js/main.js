@@ -39,7 +39,7 @@ button.addEventListener("click", async () => {
             }
 
             warningLabel.textContent = loadingContentLabels[loadingIndex];
-        }, 1000);
+        }, 5000);
     }
 
     function stopLoadingAnimation() {

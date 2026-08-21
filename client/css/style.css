@@ -94,7 +94,6 @@ body {
 
 .nav a:hover {
     color: var(--orange);
-    transform: scale(1.025);
 }
 
 .logo-container {
@@ -107,7 +106,7 @@ body {
 .logo {
     color: var(--white);
     font-weight: 650;
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 .nav img {
@@ -118,6 +117,54 @@ body {
 .nav .btn-primary {
     flex-shrink:0;
     white-space:nowrap;
+}
+
+/* ================= MENU-DROPDOWN ================= */
+
+.menu-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#btn-menu-dropdown {
+    display: inline-block;
+    padding: 10px 16px;
+    color: var(--black);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+    max-width: calc(100vw - 20px);
+    box-sizing: border-box;
+
+    background-color: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.menu-content a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-content a:hover {
+    background-color: var(--white);
+}
+
+.menu-dropdown:hover .menu-content {
+    display: block;
 }
 
 /* ================= BUTTONS ================= */
@@ -1181,7 +1228,7 @@ details[open] summary::after {
     background-color: var(--light);
     color: var(--black);
 
-    padding: 100px 60px;
+    padding: 50px 60px;
     margin: 30px auto;
 
     text-align: center;
