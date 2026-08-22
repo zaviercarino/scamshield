@@ -163,7 +163,10 @@ body {
     background-color: var(--white);
 }
 
-.menu-dropdown:hover .menu-content,
+.menu-content {
+    display: none;
+}
+
 .menu-dropdown.active .menu-content {
     display: block;
 }
