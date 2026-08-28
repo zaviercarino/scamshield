@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next';
+
 // ============== Buttons ============== \\
 const menuButton = document.getElementById("btn-menu-dropdown");
 const menuDropdown = document.querySelector(".menu-dropdown");
