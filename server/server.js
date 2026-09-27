@@ -10,10 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 const analyzerLimit = rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 5,
+    windowMs: 1440 * 60 * 1000,
+    max: 10,
     message: {
-        error: "Too many requests. Please try again later."
+        error: "You Have Hit Your Daily Limit."
     },
     standardHeaders: true,
     legacyHeaders: false

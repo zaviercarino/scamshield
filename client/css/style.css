@@ -512,19 +512,29 @@ footer p {
 /* ================= SCAM ANALYZER ================= */
 
 .analyzer-page {
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
     padding: 40px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    background-image: url(../images/background-images/background-image-analyzer.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .analyzer-header {
     background: var(--navy);
+
     border-radius: 2rem;
-    padding: 15px 30px;
+    width: min(100%, 900px);
+    padding: 20px 40px;
+
     margin: 30px auto;
     text-align: center;
 }
@@ -536,7 +546,7 @@ footer p {
 
 #red-disclaimer-small {
     color: var(--red);
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 
 .analyzer-page h2 {
@@ -582,8 +592,13 @@ footer p {
 }
 
 #scam-output {
+    width: 100%;
+    box-sizing: border-box;
+
     margin: 20px auto;
     padding: 20px 30px;
+    
+    text-align: center;
 
     background: var(--white);
     color: var(--black);
@@ -611,11 +626,6 @@ footer p {
 
 .results-card button:hover {
     transform: translateY(-3px);
-}
-
-.analyzer-page {
-    width: 100%;
-    max-width: 1200px;
 }
 
 .analyzer-header,
