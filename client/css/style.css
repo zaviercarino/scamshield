@@ -1345,7 +1345,47 @@ details[open] summary::after {
 .alert-card a:hover {
     color:var(--orange);
 }
+/* ================= PRIVACY POLICY & TERMS OF SERVICE ================= */
+#top-bar-letter,
+.main-page {
+    display: grid;
+    padding: 30px;
+    margin: auto 20px;
+}
 
+#sub-text {
+    color: #333;
+    font-size: 0.75rem;
+}
+
+.section-policy {
+    display: block;
+    padding: 30px auto;
+    margin: 15px 20px;
+}
+
+#section-policy-header {
+    text-align: center;
+    font-size: 1.1rem;
+
+    border-radius: 12px;
+    background-color: var(--navy);
+    color: white;
+
+    max-width: 500px;
+    padding: 15px auto;
+    margin: 30px auto;
+}
+
+#section-policy-text {
+    text-align: center;
+    font-size: 0.9rem;
+    
+    padding: 30px auto;
+    margin: 15px auto;
+
+    max-width: 850px;
+}
 /* ================= CTA ================= */
 .cta {
     text-align: center;
