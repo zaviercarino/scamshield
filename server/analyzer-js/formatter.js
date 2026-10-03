@@ -52,11 +52,11 @@ export function formatResult(data) {
                 </article>
 
                 <article class="result-section" id="next-steps-section">
-                    <h3>Learn more</h3>
-                        <a class="btn-primary" href="${data.library}">Read In Library</a>
+                    <h3>Learn more about this scam</h3>
+                        <a class="btn-primary" href="${data.library}">Read Here</a>
                 </article>
                 
-                <p id="disclaimer">ScamShield Analyzer uses AI to detect potential scam risks. Results are estimates and may not always be accurate. Always use your own judgment before responding or sharing information.</p>
+                <p id="disclaimer"> <br> ScamShield Analyzer uses AI to detect potential scam risks. Results are estimates and may not always be accurate. Always use your own judgment before responding or sharing information.</p>
             </div>
         </section>
     `;

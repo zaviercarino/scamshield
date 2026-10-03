@@ -1348,14 +1348,36 @@ details[open] summary::after {
 /* ================= PRIVACY POLICY & TERMS OF SERVICE ================= */
 #top-bar-letter,
 .main-page {
+
+    background-image: url("../images/background-images/background-image-analyzer.svg");
     display: grid;
-    padding: 30px;
-    margin: auto 20px;
+    margin: auto;
+    margin-top: 30px;
+
+    text-align: center;
+    border-radius: 1rem;
 }
 
+.main-page {
+    width: 850px;
+    max-width: 80%;
+    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.3);
+}
+
+#top-bar-letter {
+    width: 600px;
+    max-width: 80%;
+
+    padding: 30px 100px;
+    margin: 30px auto;
+
+    background-color: var(--navy);
+    color: var(--orange);
+}
 #sub-text {
-    color: #333;
+    color: white;
     font-size: 0.75rem;
+    margin: auto;
 }
 
 .section-policy {
