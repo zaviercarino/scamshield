@@ -50,6 +50,12 @@ export function formatResult(data) {
                         ${data.whatToDoIfYouAlreadyResponded.map(item => `<li>${item}</li>`).join("")}
                     </ul>
                 </article>
+
+                <article class="result-section" id="next-steps-section">
+                    <h3>Learn more</h3>
+                        <a class="btn-primary" href="${data.library}">Read In Library</a>
+                </article>
+                
                 <p id="disclaimer">ScamShield Analyzer uses AI to detect potential scam risks. Results are estimates and may not always be accurate. Always use your own judgment before responding or sharing information.</p>
             </div>
         </section>

@@ -155,35 +155,33 @@ Family Emergency scams
 
 none
 
-In the event you encountered a scam that does not apply to any of these categories, you may attribute the most relevant scamtype of your choice.
+In the event you encountered a scam that does not apply to any of these categories, you MUST make the value "none" without the quotations
 
 Allowed library values:
 
-phishing
+account-verification-scams.html
 
-impersonation
+bank-finance-impersonation-scams.html
 
-password_security
+cryptocurrency-and-investment-scams.html
 
-identity_theft
+delivery-package-scams.html
 
-fake_delivery
+family-emergency-scams.html
 
-fake_invoice
+giftcard-scams.html
 
-fake_job
+government-impersonation-scams.html
 
-crypto
+job-employment-scams.html
 
-investment
+online-shopping-scams.html
 
-romance
+payment-scams.html
 
-gift_card
+romance-scams.html
 
-banking_security
-
-account_security
+tech-support-scams.html
 
 ## Required JSON Schema
 
