@@ -1426,6 +1426,10 @@ footer {
     border-top: 1px solid var(--light);
 }
 
+.footer-links {
+    color: #333;
+    text-decoration: none;
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
