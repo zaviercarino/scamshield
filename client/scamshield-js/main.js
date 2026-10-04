@@ -9,9 +9,12 @@ menuButton.addEventListener("click", () => {
 // ============== Message Analyzer ============== \\
 const button = document.getElementById("submit-button");
 const warningLabel = document.getElementById("warning-text");
+const messageInput = document.getElementById("input-scam");
+
+let image_upload;
 
 button.addEventListener("click", async () => {
-    const userMessage = document.getElementById("input-scam").value;
+    const userMessage = messageInput.value;
     const letterCount = userMessage.length;
     
     const outputLabel = document.getElementById("scam-output");
@@ -103,5 +106,41 @@ button.addEventListener("click", async () => {
     clearButton.addEventListener("click", () => {
         outputLabel.innerHTML = ``;
         clearButton.classList = "hidden";
+
+        image_upload = "";
+        image_upload_area.src = "";
+        image_upload_area.style.display = "none";
     })
 });
+
+// ============== Upload Image Analyzer ============== \\
+const upload_button = document.getElementById("image-uploader");
+const image_upload_area = document.getElementById("image-upload-area");
+const remove_image_button = document.getElementById("remove-image-button")
+
+upload_button.addEventListener("change", async (event) => {
+    const user_file = event.target.files[0];
+
+    if(user_file.size / 1024 > 5000){
+        warningLabel.textContent = `File exceeds 5MB limit.`;
+        setTimeout(() => {
+            warningLabel.textContent = ``;
+        }, 3000);
+        return;
+    }
+
+    remove_image_button.style.display = "block"
+
+    image_upload = user_file
+    image_upload_area.src = URL.createObjectURL(user_file);;
+    image_upload_area.style.display = "block";
+    
+    console.log(image_upload);
+});
+
+remove_image_button.addEventListener("click", () => {
+    image_upload = "";
+    image_upload_area.src = "";
+    image_upload_area.style.display = "none";
+    messageInput.value = '';
+})

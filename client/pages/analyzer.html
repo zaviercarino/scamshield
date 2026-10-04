@@ -130,13 +130,18 @@
                     Paste suspicious emails, text messages, or social media messages
                     below and let AI analyze them for potential scam flags.
                 </p>
-                <p id="red-disclaimer-small">Disclaimer: Users are limited to 10 analyses a day.</p>
+                <p id="red-disclaimer-small">Disclaimer: Users are limited to 10 analyses a day. <br> Image uploads are a WIP</p>
             </div>
             <div class="input-card">
-                <textarea
-                    id="input-scam"
-                    placeholder="Paste a suspicious message, email, or link"
-                ></textarea>
+                <div class="input-box">
+                    <textarea
+                        id="input-scam"
+                        placeholder="Paste a suspicious message, email, or link"
+                    ></textarea>
+                    <img id="image-upload-area">
+                    <button id="remove-image-button">X</button>
+                    <input type="file" id="image-uploader" accept="image/png, image/jpeg, image/webp">
+                </div>
                 <button class="btn-primary" id="submit-button">
                     Analyze Message
                 </button>

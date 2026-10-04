@@ -563,10 +563,81 @@ footer p {
     display: grid;
 }
 
+.input-box {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+#image-upload-area {
+    position: absolute;
+    bottom: 80px;
+    left: 15px;
+
+    max-width: 180px;
+    max-height: 180px;
+
+    object-fit: contain;
+    border-radius: 8px;
+
+    display: none;
+}
+
+#image-uploader {
+    align-self: flex-end;
+
+    height: 30px;
+    max-height: 80%;
+    width: 100px;
+    max-width: 80%;
+
+    margin-top: -35px;
+
+    transition: 0.3s ease;
+}
+
+#image-uploader::file-selector-button {
+    background-color: var(--navy);
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 6px 12px;
+}
+
+#remove-image-button {    
+    height: 30px;
+    max-height: 80%;
+    width: 30px;
+    max-width: 80%;
+
+    background-color: var(--navy);
+    color: var(--red);
+    font-weight: bold;
+    border-radius: 6px;
+    border-width: 0px;
+
+    margin: 5px;
+    margin-top: -25px;
+
+    display: block;
+    transition: 0.3s ease;
+}
+
+#image-uploader:hover,
+#remove-image-button:hover {
+    transform: translateY(-3px);
+}
+
 .input-card textarea {
     height: 230px;
     margin-bottom: 30px;
     padding: 20px;
+
+    position: relative;
+    width: 100%;
 
     border: none;
     border-radius: 10px;
@@ -589,6 +660,10 @@ footer p {
 
 .results-card p {
     color: var(--black);
+}
+
+#submit-button{
+    margin-top: 10px;
 }
 
 #scam-output {
