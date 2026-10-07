@@ -825,16 +825,14 @@ footer p {
 
     text-align: left;
 
-    transition: 0.2s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .07);
+    transition: .25s ease;
 }
 
 .related-scam:hover {
+    transform: translateY(-6px);
     border-color: var(--orange);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 7px 18px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, .13);
 }
 
 
