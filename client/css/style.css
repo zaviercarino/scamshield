@@ -665,6 +665,11 @@ footer p {
     border-left: 1px solid var(--light);
 }
 
+.real-example img,
+.fake-example img {
+    max-height: 250px;
+}
+
 
 /* =========================================================
    PROCESS
@@ -794,11 +799,10 @@ footer p {
    RELATED SCAMS
    ========================================================= */
 
+
 .related-scams {
     margin: 45px auto 0;
-
     max-width: 800px;
-
     text-align: center;
 }
 
@@ -813,7 +817,11 @@ footer p {
 }
 
 .related-scam {
-    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 18px;
 
     border: 1px solid var(--light);
     border-radius: 12px;
@@ -822,11 +830,17 @@ footer p {
     background: var(--white);
 
     text-decoration: none;
-
     text-align: left;
 
     box-shadow: 0 5px 12px rgba(0, 0, 0, .07);
     transition: .25s ease;
+}
+
+.related-scam img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .related-scam:hover {
@@ -835,6 +849,12 @@ footer p {
     box-shadow: 0 14px 24px rgba(0, 0, 0, .13);
 }
 
+/* Stack cards on smaller screens */
+@media (max-width: 600px) {
+    .related-scam-list {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* =========================================================
    MOBILE
