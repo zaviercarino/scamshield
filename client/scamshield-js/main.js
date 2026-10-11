@@ -36,7 +36,8 @@ button.addEventListener("click", async () => {
     }
 
     if (image_upload) {
-        await analyze_message(userMessage, "Image_Analysis");
+        const userImage = await imageToBase64(image_upload);
+        await analyze_message(userImage, "Image_Analysis");
     } else {
         await analyze_message(userMessage, "Message_Analysis");
     }
@@ -91,7 +92,7 @@ function imageToBase64(file) {
 remove_image_button.addEventListener("click", () => {
     image_upload = "";
     upload_button.value = "";
-    
+
     image_upload_area.src = "";
     image_upload_area.style.display = "none";
 
