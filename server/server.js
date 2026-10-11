@@ -51,7 +51,7 @@ app.post("/analyze", analyzerLimit, async (req, res) => {
         console.error(error);
 
         res.status(500).json({
-            error: "Analysis Failed. Try again later."
+            error: "Analysis Failed. Try again soon."
         });
     }
 });

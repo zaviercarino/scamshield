@@ -18,20 +18,17 @@ const remove_image_button = document.getElementById("remove-image-button");
 
 let image_upload = null;
 
-
 button.addEventListener("click", async () => {
     const userMessage = messageInput.value.trim();
 
     if (!image_upload && !userMessage) {
-        warningLabel.textContent =
-            "Please enter a message or upload an image.";
+        warningLabel.textContent = "Please enter a message or upload an image.";
         setTimeout(() => warningLabel.textContent = "", 3000);
         return;
     }
 
     if (userMessage.length > 15000) {
-        warningLabel.textContent =
-            `Message too long by ${userMessage.length - 15000} characters.`;
+        warningLabel.textContent = `Message too long by ${userMessage.length - 15000} characters.`;
         setTimeout(() => warningLabel.textContent = "", 3000);
         return;
     }
@@ -58,7 +55,6 @@ button.addEventListener("click", async () => {
 
 
 // ============== Image Analyzer ============== \\
-
 upload_button.addEventListener("change", (event) => {
     const user_file = event.target.files[0];
 
@@ -101,7 +97,6 @@ function imageToBase64(file) {
         reader.readAsDataURL(file);
     });
 }
-
 
 remove_image_button.addEventListener("click", () => {
     image_upload = "";
@@ -155,19 +150,6 @@ async function analyze_message(userMessage, messagetype, imageData = null, mimeT
             stopLoadingAnimation();
             button.disabled = false; 
         }
-     
-        const clearButton = document.getElementById("clear-output");
-        clearButton.classList = "clear-output-button";
-        
-        clearButton.addEventListener("click", () => {
-            outputLabel.innerHTML = ``;
-            clearButton.classList = "hidden";
-        
-            image_upload = "";
-            image_upload_area.src = "";
-            image_upload_area.style.display = "none";
-        })
-
     } else if(messagetype == "Message_Analysis") {
         console.log("Message Analysis has begun.");
         startLoadingAnimation();
@@ -198,7 +180,7 @@ async function analyze_message(userMessage, messagetype, imageData = null, mimeT
             }
         } catch(error){
             console.error(error);
-            warningLabel.textContent = `Analyzer unavailable. Please try again later.`;
+            warningLabel.textContent = `Analyzer unavailable. Please try again soon. \n Error may be due to high usage.`;
             setTimeout(() => {
                 warningLabel.textContent = ``;
             }, 3000);
@@ -206,8 +188,8 @@ async function analyze_message(userMessage, messagetype, imageData = null, mimeT
             stopLoadingAnimation();
             button.disabled = false; 
         }
-     
-        const clearButton = document.getElementById("clear-output");
+    }
+    const clearButton = document.getElementById("clear-output");
         clearButton.classList = "clear-output-button";
         
         clearButton.addEventListener("click", () => {
@@ -217,8 +199,7 @@ async function analyze_message(userMessage, messagetype, imageData = null, mimeT
             image_upload = "";
             image_upload_area.src = "";
             image_upload_area.style.display = "none";
-        })
-    }
+    })
 }
 
 // ======================================== Loading Text | Message Analysis ======================================== \\
