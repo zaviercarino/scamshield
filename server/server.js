@@ -24,16 +24,30 @@ app.get("/", (req, res) => {
     res.send("ScamShield backend is running!");
 });
 
+
 app.post("/analyze", analyzerLimit, async (req, res) => {
     try {
-        const message = scamPrompt + req.body.message + `END_UNTRUSTED_CONTENT`;
+        const { message = "", image = null, mimeType = null } = req.body;
 
-        const result = await analyzeMessage(message);
+        if (!message.trim() && !image) {
+            return res.status(400).json({
+                error: "Please provide a message or image."
+            });
+        }
+
+        const prompt = scamPrompt + message + "\nEND_UNTRUSTED_CONTENT";
+
+        const result = await analyzeMessage(
+            prompt,
+            image,
+            mimeType
+        );
+
         const formatted = formatResult(result);
 
         res.send(formatted);
 
-    } catch(error) {
+    } catch (error) {
         console.error(error);
 
         res.status(500).json({

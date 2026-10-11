@@ -18,6 +18,7 @@ const remove_image_button = document.getElementById("remove-image-button");
 
 let image_upload = null;
 
+
 button.addEventListener("click", async () => {
     const userMessage = messageInput.value.trim();
 
@@ -36,12 +37,25 @@ button.addEventListener("click", async () => {
     }
 
     if (image_upload) {
-        const userImage = await imageToBase64(image_upload);
-        await analyze_message(userImage, "Image_Analysis");
+        try {
+            const userImage = await imageToBase64(image_upload);
+
+            await analyze_message(
+                userMessage,
+                "Image_Analysis",
+                userImage,
+                image_upload.type
+            );
+        } catch (error) {
+            console.error(error);
+            warningLabel.textContent = "Failed to read image.";
+            setTimeout(() => warningLabel.textContent = "", 3000);
+        }
     } else {
         await analyze_message(userMessage, "Message_Analysis");
     }
 });
+
 
 // ============== Image Analyzer ============== \\
 
@@ -100,7 +114,7 @@ remove_image_button.addEventListener("click", () => {
 })
 
 // ======================================== Main Analyze Function ======================================== \\
-async function analyze_message(userMessage, messagetype) {
+async function analyze_message(userMessage, messagetype, imageData = null, mimeType = null) {
     if(messagetype == "Image_Analysis") {
         console.log("Image Analysis has begun.");
         startLoadingAnimation();
@@ -113,7 +127,9 @@ async function analyze_message(userMessage, messagetype) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                message: userMessage
+                message: userMessage,
+                image: imageData,
+                mimeType: mimeType
             })
         });
             const result = await response.text(); 
