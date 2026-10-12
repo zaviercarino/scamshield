@@ -1108,6 +1108,11 @@ footer p {
     margin: 0 auto;
     font-size: 0.7rem;
 }
+
+#disclaimer-2 {
+    color: var(--white);
+    font-size: 0.7rem;
+}
 /* ================= SCAM LIBRARY ================= */
 .library-grid {
     display: grid;
