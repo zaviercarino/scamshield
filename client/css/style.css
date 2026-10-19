@@ -1222,6 +1222,34 @@ footer p {
     white-space: normal;
     overflow-wrap: break-word;
 }
+
+.stats-source {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 10px 4vw 15px;
+    font-size: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-source p {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+.stats-source a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
 /* ================= INFORMATION ================= */
 
 .info1 {
