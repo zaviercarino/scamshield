@@ -1578,6 +1578,14 @@ footer p {
 
 }
 
+#process-disclaimer {
+    text-align: center;
+    margin: auto;
+
+    font-size: 0.7rem;
+    color: var(--navy);
+}
+
 /* ================= SIGN-UP-FORM ================= */
 
 .newsletter{
