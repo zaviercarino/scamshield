@@ -12,7 +12,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 const analyzerLimit = rateLimit({
     windowMs: 1440 * 60 * 1000,
-    max: 10,
+    max: 30,
     message: {
         error: "You Have Hit Your Daily Limit."
     },
